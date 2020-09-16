@@ -1,3 +1,5 @@
+# PathfindingVisualizer.py
+
 import pygame
 import math
 from queue import PriorityQueue
@@ -301,6 +303,6 @@ def main(window, width):
 						grid = make_grid(ROWS, width)
 						start = None
 						end = None
-	pygame.quit()
-    
+   
 main(WINDOW, WIDTH)
+pygame.quit()
