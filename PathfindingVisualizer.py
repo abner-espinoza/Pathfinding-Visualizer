@@ -274,21 +274,6 @@ def main(window, width):
 				if event.key == pygame.K_x:
 					run = False
 				if event.key == pygame.K_UP:
-					grid_size_up = 0 # keeps track of grid size when pressing 'UP' key
-					if ROWS == 50:
-						ROWS += 20
-						grid_size_up += 1
-					elif ROWS == 20:
-						ROWS += 30
-						grid_size_up += 1
-					elif ROWS == 10:
-						ROWS += 10
-						grid_size_up += 1
-					if grid_size_up == 1:
-						grid = make_grid(ROWS, width)
-						start = None
-						end = None
-				if event.key == pygame.K_DOWN:
 					grid_size_down = 0 # keeps track of grid size when pressing 'DOWN' key
 					if ROWS == 70:
 						ROWS -= 20
@@ -300,6 +285,21 @@ def main(window, width):
 						ROWS -= 10
 						grid_size_down += 1
 					if grid_size_down == 1:
+						grid = make_grid(ROWS, width)
+						start = None
+						end = None
+				if event.key == pygame.K_DOWN:
+					grid_size_up = 0 # keeps track of grid size when pressing 'UP' key
+					if ROWS == 50:
+						ROWS += 20
+						grid_size_up += 1
+					elif ROWS == 20:
+						ROWS += 30
+						grid_size_up += 1
+					elif ROWS == 10:
+						ROWS += 10
+						grid_size_up += 1
+					if grid_size_up == 1:
 						grid = make_grid(ROWS, width)
 						start = None
 						end = None
